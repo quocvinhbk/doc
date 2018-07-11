@@ -15,30 +15,24 @@ pbcopy < ~/.ssh/id_rsa.pub
 ```
 ssh -T git@github.com
 ```
+
 - [git multiple account](https://medium.com/@fredrikanderzon/setting-up-ssh-keys-for-multiple-bitbucket-github-accounts-a5244c28c0ac)
-
-```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-ssh-keygen -t rsa -C "companyName" -f "companyName"
-ssh-keygen -t rsa -b 4096 -C "vinhnq@zigexn.vn"
-
-
-ssh-add ~/.ssh/companyName
-```
-
 - [ssh simplify](https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
 
-- ssh-config-key
+- [multiple-ssh-setting](https://gist.github.com/jexchan/2351996)
+
+
+- ssh cache key
 ```
-Host github.com/
-    User git
-    HostName github.com
-    IdentityFile ~/.ssh/github.project1.key
-Host github-org
-    User git
-    HostName github.com
-    IdentityFile ~/.ssh/github.org.key
-Host github.com
-    User git
-    IdentityFile ~/.ssh/github.key
+add: ssh-add ~/.ssh/dir/id_rsa
+delete: ssh-add -D
+list: ssh-add -l
+```
+
+```
+#foobar account
+Host github.com-foobar
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_foobar
 ```
