@@ -9,8 +9,8 @@ docker rmi -f $(docker images -a -q)
 
       
 
-1. Defile project
-  - create Dockerfile 
+1. Define project
+  - create Dockerfile
   - create Gemfile
   - create Gemfile.lock
   - create docker-compose.yml
