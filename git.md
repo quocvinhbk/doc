@@ -13,26 +13,29 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 - account check
 ```
-ssh -T git@github.com
+ssh -vT git@github.com
 ```
-
-- [git multiple account](https://medium.com/@fredrikanderzon/setting-up-ssh-keys-for-multiple-bitbucket-github-accounts-a5244c28c0ac)
-- [ssh simplify](https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
-
-- [multiple-ssh-setting](https://gist.github.com/jexchan/2351996)
-
 
 - ssh cache key
 ```
 add: ssh-add ~/.ssh/dir/id_rsa
 delete: ssh-add -D
 list: ssh-add -l
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/dir/id_rsa
 ```
 
-```
-#foobar account
-Host github.com-foobar
-	HostName github.com
-	User git
-	IdentityFile ~/.ssh/id_rsa_foobar
-```
+
+# githubPersonal
+Host personal
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+
+# githubWork
+Host work
+   HostName ssh.github.com
+   Port 443
+   User git
+   IdentityFile ~/.ssh/id_rsa_zigexn

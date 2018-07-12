@@ -22,7 +22,7 @@ docker rmi -f $(docker images -a -q)
       docker-compose build
 
 3. Connect the database
-  - replace new config/database.yml file 
+  - replace new config/database.yml file
   - boot the app
       docker-compose up
 
@@ -34,7 +34,7 @@ docker rmi -f $(docker images -a -q)
 
 
 
-# Ctrl-C is working too, but need to remove file: tmp/pids/server.pid
+#### Ctrl-C is working too, but need to remove file: tmp/pids/server.pid
 
 4. mysql docker 
   $ docker run -p 3306:3306 -d --name mysql -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
@@ -48,16 +48,16 @@ docker rmi -f $(docker images -a -q)
     LastName varchar(255),
     FirstName varchar(255),
     Address varchar(255),
-    City varchar(255) 
+    City varchar(255)
 );
 
-# mysql -u root -p -h 172.17.0.1 -P 3306
+#### mysql -u root -p -h 172.17.0.1 -P 3306
 
 mysql -u root -p -h docker.for.mac.localhost -P 3306
 mysql -u root -p -h 127.0.0.1 -P 6603
 
 
-# https://dzone.com/articles/docker-for-mac-mysql-setup
+#### https://dzone.com/articles/docker-for-mac-mysql-setup
 $ docker run -p 3306:3306 -d --name mysql --e="MYSQL_ROOT_PASSWORD=password" mysql/mysql-server
 
 mysql > select host,user from mysql.user;
