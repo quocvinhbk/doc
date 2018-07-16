@@ -1,0 +1,12 @@
+{
+    "update.channel": "none",
+    "window.zoomLevel": 1,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "files.exclude": {
+      "**/.git": false
+    },
+    "extensions.ignoreRecommendations": true,
+    "explorer.openEditors.visible": 0
+  }
