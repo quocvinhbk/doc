@@ -1,6 +1,8 @@
+# 3 linux tip
+
 - add user
-```
-useradd -aG root, wheel admin
+
+```useradd -aG root, wheel admin
 passwd admin
 
 usermod -aG root admin
@@ -11,17 +13,23 @@ admin     ALL=(ALL)    ALL
 su - admin
 ```
 
-# 4 setup bash: 
+- find
 
-- .bash_profile:
+``` find . -name "*.txt"
 ```
-if [ -f $HOME/.bashrc ]; then
+
+# 4 setup bash
+
+- .bash_profile
+
+``` if [ -f $HOME/.bashrc ]; then
         source $HOME/.bashrc
 fi
 ```
+
 - .zshrc
-```
-source /Users/g2/.bashrc
+
+```source /Users/g2/.bashrc
 ```
 
 [macos setup 1](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
