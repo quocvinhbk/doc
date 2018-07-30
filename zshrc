@@ -62,7 +62,12 @@ ZSH_THEME="robbyrussell"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-plugins=( git zsh-autosuggestions zsh-syntax-highlighting )
+plugins=( git 
+          zsh-autosuggestions 
+          zsh-syntax-highlighting
+          rails
+          ruby
+          )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -209,6 +214,7 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+#alias lr='ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/''
 
 #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
 #           displays paginated result with colored search terms and two lines surrounding each hit.            Example: mans mplayer codec
@@ -427,3 +433,5 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 
 
 alias cl='clear'
+alias bers='bundle exec rails server'
+alias berc='bundle exec rails console'

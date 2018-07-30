@@ -35,3 +35,7 @@ fi
 [macos setup 1](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 [macos setup 2](https://github.com/nicolashery/mac-dev-setup)
 [macos setup 3](https://medium.com/@tzhenghao/a-guide-to-building-a-great-bashrc-23c52e466b1c)
+
+[linux command](https://www.cyberciti.biz/faq/how-do-i-find-out-what-ports-are-listeningopen-on-my-linuxfreebsd-server/)
+
+- check listening port ``` lsof -i :3000 OR lsof -i :1-1024```

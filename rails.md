@@ -10,5 +10,9 @@
 ```
 rails new myapp --database=mysql
 rails new myapp -d mysql
+rails -h
+rails new -h
+rails new --skip-test
+
 ```
 
