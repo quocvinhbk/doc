@@ -26,3 +26,7 @@ bin/solr create -c <yourCollection> -s 2 -rf 2
 solr model: SolrCloud - vs - standardlone
 SolrCloud => collection
 standardlone => core
+
+#### solr rename core by hand
+  * rename solr_home/core_name directory
+  * edit file core.properties

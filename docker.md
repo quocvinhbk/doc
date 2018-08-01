@@ -65,3 +65,15 @@ mysql > select host,user from mysql.user;
 mysql > CREATE USER 'admin'@'%' IDENTIFIED BY '12345';
 mysql > GRANT ALL PRIVILEGES ON * . * TO 'admin'@'%';
 mysql > select host,user from mysql.user;
+
+
+docker cp
+  * like unix cp -a  OR cp -rPp ( copied recursively with permission and preserved )
+  * syntax ``` docker cp container_name:/SRC_PATH DESC_PATH ```
+  * SRC_PATH: default is root path => '/' is option
+  * 1. SRC_PATH is file => create desc path file if not present, else overwritten
+  * 2. DESC_PATH is directory 
+      => create directory if DESC_PATH does not exists
+      => DESC_PATH exists
+          => SOURCE_PATH end with /. => copy content file
+          => SOURCE_PATH not end with /. => copy source to this directory

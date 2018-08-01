@@ -27,7 +27,7 @@ su - admin
 fi
 ```
 
-- .zshrc
+- .zshrc    reload: source ~/.zshrc
 
 ```source /Users/g2/.bashrc
 ```
@@ -39,3 +39,7 @@ fi
 [linux command](https://www.cyberciti.biz/faq/how-do-i-find-out-what-ports-are-listeningopen-on-my-linuxfreebsd-server/)
 
 - check listening port ``` lsof -i :3000 OR lsof -i :1-1024```
+
+#### unix absolute path and relative path: 
+  * absolute path: start with character '/': meaning root path
+  * relative path: from present working directory ( pwd )
