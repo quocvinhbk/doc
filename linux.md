@@ -43,3 +43,13 @@ fi
 #### unix absolute path and relative path: 
   * absolute path: start with character '/': meaning root path
   * relative path: from present working directory ( pwd )
+
+#### ssh key
+  * AFAIK the values are:
+  * 700 for the hidden directory ".ssh" where key file is located
+  * 600 for the keyfile "id_rsa"
+
+
+### digital ocean
+  * 178.128.48.97
+  * root

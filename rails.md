@@ -16,3 +16,11 @@ rails new --skip-test
 
 ```
 
+- generate scaffold
+
+  ```
+   rails g scaffold Article title:string content:text
+   rails g scaffold Comment body:text article:references
+  ```
+
+- text method ``` pluralize(article.count, 'article') ```

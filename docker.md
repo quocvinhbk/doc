@@ -72,7 +72,7 @@ docker cp
   * syntax ``` docker cp container_name:/SRC_PATH DESC_PATH ```
   * SRC_PATH: default is root path => '/' is option
   * 1. SRC_PATH is file => create desc path file if not present, else overwritten
-  * 2. DESC_PATH is directory 
+  * 2. SRC_PATH is directory 
       => create directory if DESC_PATH does not exists
       => DESC_PATH exists
           => SOURCE_PATH end with /. => copy content file
