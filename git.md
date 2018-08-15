@@ -61,8 +61,20 @@ git config user.name "user1"
 git config user.email "user1@example.com"
 ```
 
-Where user1 matches the values you used earlier in your ssh config.
+```
+#### Personal account
+Host me.github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+#### Work account
+Host zigexn
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_zigexn
 
-You can now git push as normal and the correct key will automatically be used.
 
-I hope you found this tip useful! Check out our earlier Tips of the Week or tweet your own tip suggestions to @pvdevoor."
+git clone git@me.github.com:quocvinhbk/toy_app.git
+git clone git@zigexn:zigexn_user/repo_name.git
+git remote set-url origin git@zigexn:zigexn_user/repo_name.git
+```

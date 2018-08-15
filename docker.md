@@ -36,14 +36,20 @@ docker rmi -f $(docker images -a -q)
 
 #### Ctrl-C is working too, but need to remove file: tmp/pids/server.pid
 
-4. mysql docker 
+##### 4. mysql docker 
+
+  (install mysql on centos7)[https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-centos-7]
+  ``` 
+  > uninstall plugin validate_password;
+  > ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+  
   $ docker run --name my_solr -d -p 8983:8983 -t solr
   $ docker run -p 3306:3306 -d --name mysql -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
   $ docker run --name centos -v `pwd`:/centos -itd --restart=always centos tail -f /dev/null
   $ docker run -p 3307:3306 --name mysql -itd --restart=always --env="MYSQL_ROOT_PASSWORD=12345" mysql/mysql-server:5.7
   $ docker logs mysql 2>&1 | grep GENERATED
   $ ALTER USER 'root'@'localhost' IDENTIFIED BY '12345';
-
+  ```
   CREATE TABLE foo (
     foo_id int,
     LastName varchar(255),

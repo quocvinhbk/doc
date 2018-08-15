@@ -1,3 +1,9 @@
+#### blog
+[hackerNew](https://news.ycombinator.com/item?id=5316093)
+[opsschool](http://www.opsschool.org/en/latest/introduction.html)
+[5minutes server](https://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
+
+
 # 3 linux tip
 
 - add user
@@ -44,12 +50,39 @@ fi
   * absolute path: start with character '/': meaning root path
   * relative path: from present working directory ( pwd )
 
-#### ssh key
-  * AFAIK the values are:
-  * 700 for the hidden directory ".ssh" where key file is located
-  * 600 for the keyfile "id_rsa"
-
-
 ### digital ocean
   * 178.128.48.97
-  * root
+
+#### ssh key [https://wiki.centos.org/HowTos/Network/SecuringSSH]
+
+##### root
+
+```
+useradd user1
+passwd user1
+
+sudo visudo
+> user1 ALL(ALL)   ALL
+
+sudo vi /etc/ssh/sshd_config
+> AlowUsers user1
+```
+
+##### user1
+
+```
+su - user1
+sudo vi ~/.ssh/authorized_keys
+> puts your local publish key. Usually, run at local: $ cat ~/.ssh/id_rsa.pub
+
+sudo chown 700 ~/.ssh
+sudo chown 600 ~/.ssh/*
+```
+
+
+systemctl enable nginx
+systemctl enable mysqld
+
+
+
+/home/admin/.rbenv/versions/2.5.1/bin/ruby
