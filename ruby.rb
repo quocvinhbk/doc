@@ -16,3 +16,9 @@ def print_time_spent
   puts "Time: #{time.round(2) }"
 end
 
+
+## FILE system
+## file.read
+## file.read(4)
+## file.rewind  => ruby keep track posision when read file, rewind = restart
+## file.

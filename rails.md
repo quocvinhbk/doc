@@ -55,7 +55,7 @@ passenger standardlone package
 
 ##### rails app
   * bundle install --without development test
-  * SECRET_KEY_BASE
+  * SECRET_KEY_BASE : config/secret.yml => $ production: secret_key_base: <%= SECRET_KEY_BASE %>
   * bundle exec rake assets:production db:migrate -e production
   * bundle exec passenger start -e production
 
@@ -68,3 +68,9 @@ passenger standardlone package
   config: /opt/nginx/conf/nginx.conf
   bin: sudo /etc/init.d/nginx start/stop/status
   ```
+
+
+```
+review list: 
+  - active record - Validation
+```
