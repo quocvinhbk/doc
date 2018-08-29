@@ -21,4 +21,11 @@ end
 ## file.read
 ## file.read(4)
 ## file.rewind  => ruby keep track posision when read file, rewind = restart
-## file.
+## file.seek
+
+## Block, Proc, lambda, yield
+## lambda is Proc object too
+## ->   ==    lambda   ( shorter version)
+## lambda: short ->    long -   lambda { |x| xxx }
+## proc: short proc { |y| yyy }   long - Proc.new { |z| zzz}
+

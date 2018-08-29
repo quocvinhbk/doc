@@ -8,8 +8,7 @@
 
 - rails new command:
 ```
-rails new myapp --database=mysql
-rails new myapp -d mysql
+rails new myapp -d mysql -T
 rails -h
 rails new -h
 rails new --skip-test
@@ -74,3 +73,8 @@ passenger standardlone package
 review list: 
   - active record - Validation
 ```
+
+
+
+### POSTMAN
+
