@@ -1,28 +1,33 @@
 use test_app_development;
 
 /*
- create table customers (id int not null, firstname varchar(30), lastname varchar(30), city varchar(30), state varchar(30), 
-                        primary key (id));
+ create table customers (id int not null, firstname varchar(30), lastname varchar(30), 
+                        gender varchar(1),
+                        age int,
+                        city varchar(30), state varchar(30),
+                        primary key (id),
+                        updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+                        created_at TIMESTAMP NOT NULL DEFAULT NOW(); );
  explain customers;
  insert into customers ( id, firstname, lastname, city, state) 
 values 
-(10101, 'John', 'Gray', 'Lynden', 'Washington'),
-(10298, 'Leroy', 'Brown', 'Pinetop', 'Arizona'),
-(10299, 'Elroy', 'Keller', 'Snoqualmie', 'Washington'),
-(10315, 'Lisa', 'Jones', 'Oshkosh', 'Wisconsin'),
-(10325, 'Ginger', 'Schultz', 'Pocatello', 'Idaho'),
-(10329, 'Kelly', 'Mendoza', 'Kailua', 'Hawaii'),
-(10330, 'Shawn', 'Dalton', 'Cannon Beach', 'Oregon'),
-(10338, 'Michael', 'Howell', 'Tillamook', 'Oregon'),
-(10339, 'Anthony', 'Sanchez', 'Winslow', 'Arizona'),
-(10408, 'Elroy', 'Cleaver', 'Globe', 'Arizona'),
-(10410, 'Mary Ann', 'Howell', 'Charleston', 'South Carolina'),
-(10413, 'Donald', 'Davids', 'Gila Bend', 'Arizona'),
-(10419, 'Linda', 'Sakahara', 'Nogales', 'Arizona'),
-(10429, 'Sarah', 'Graham', 'Greensboro', 'North Carolina'),
-(10438, 'Kevin', 'Smith', 'Durango', 'Colorado'),
-(10439, 'Conrad', 'Giles', 'Telluride', 'Colorado'),
-(10449, 'Isabela', 'Moore', 'Yuma', 'Arizona');
+(10101, 'John', 'Gray', 'M', 'Lynden', 'Washington'),
+(10298, 'Leroy', 'Brown', 'M', 'Pinetop', 'Arizona'),
+(10299, 'Elroy', 'Keller', 'M', 'Snoqualmie', 'Washington'),
+(10315, 'Lisa', 'Jones', 'M', 'Oshkosh', 'Wisconsin'),
+(10325, 'Ginger', 'Schultz', 'M', 'Pocatello', 'Idaho'),
+(10329, 'Kelly', 'Mendoza', 'M', 'Kailua', 'Hawaii'),
+(10330, 'Shawn', 'Dalton', 'M', 'Cannon Beach', 'Oregon'),
+(10338, 'Michael', 'Howell', 'M', 'Tillamook', 'Oregon'),
+(10339, 'Anthony', 'Sanchez', 'F', 'Winslow', 'Arizona'),
+(10408, 'Elroy', 'Cleaver', 'F', 'Globe', 'Arizona'),
+(10410, 'Mary Ann', 'Howell', 'F', 'Charleston', 'South Carolina'),
+(10413, 'Donald', 'Davids', 'F', 'Gila Bend', 'Arizona'),
+(10419, 'Linda', 'Sakahara', 'F', 'Nogales', 'Arizona'),
+(10429, 'Sarah', 'Graham', 'F', 'Greensboro', 'North Carolina'),
+(10438, 'Kevin', 'Smith', 'F', 'Durango', 'Colorado'),
+(10439, 'Conrad', 'Giles', 'F', 'Telluride', 'Colorado'),
+(10449, 'Isabela', 'Moore', 'F', 'Yuma', 'Arizona');
 select * from customers;
 */
 
@@ -81,6 +86,7 @@ select distinct item from items_ordered;
 select AVG(price) from items_ordered where item = 'Tent';
 select COUNT(*) from items_ordered where item = 'Tent';
 select count(*) from items_ordered;
+select COUNT(DISTINCT customer_id) from i;
 
 select max(price) from items_ordered;
 select avg(price) from items_ordered where order_date like '%-12-%';

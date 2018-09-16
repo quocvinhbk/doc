@@ -75,6 +75,20 @@ review list:
 ```
 
 
+#### active record
+rails query
+boi canh thuc te: 
+
+all shop where job.job_img_big_id = 2413
+
+eshops = Shop.eager_load(:jobs).where("jobs.job_img_big_id = ?", 2413)
+pshops = Shop.preload(:jobs).where("jobs.job_img_big_id = ?", 2413).references(:jobs)
+ishops = Shop.includes(:jobs).where("jobs.job_img_big_id = ?", 2413)
+
+rails #includes - #preload - #eager_load
+ * #preload: seperate query => N+1
+ * #eager_load: alway join
+ * #includes: switch between #preload or eager_load up on to reference job_img_big_id is present
 
 ### POSTMAN
 
